@@ -37,24 +37,31 @@ h1, h2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .meme__button {
   width: 40px;
   height: 40px;
   font-size: 2rem;
+  text-align: center;
+  transition: transform 0.2s linear;
+  user-select: none;
 }
 .meme__checkbox {
   appearance: none;
   display: none;
 }
 .meme__bottom {
-  height: 0;
   display: flex;
   justify-content: center;
-  transition: height 0.3s ease-in;
+  height: 0;
+  transition: height 0.3s ease-in; 
 }
-.meme__checkbox:checked + .meme__bottom {
+.meme__checkbox:checked ~ .meme__bottom {
   height: 400px;
+}
+.meme__checkbox:checked + .meme__top > .meme__button {
+  transform: rotate(45deg);
 }
 .meme__img {
 }
