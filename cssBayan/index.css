@@ -7,11 +7,7 @@ html {
   font: 16px 'Poppins', sans-serif;
   color: #080909;
 }
-.line {
-  height: 1px;
-  background: grey;
-  margin: 20px 0;
-}
+
 body {
   padding: 0;
   margin: 0;
@@ -26,6 +22,11 @@ h1, h2 {
 }
 .wrapper {
   width: 1000px;
+}
+.line {
+  height: 1px;
+  background: grey;
+  margin: 20px 0;
 }
 .title {
   text-align: center;
@@ -82,18 +83,6 @@ h1, h2 {
 .meme__img {
   width: 60%;
 }
-.meme:hover > .meme__bottom {
-  height: 400px;
-}
-.meme:hover .meme__button {
-  transform: rotate(45deg);
-}
-.accordion:hover .meme__button {
-  display: block;
-}
-.accordion:hover .meme__top {
-  color: #080909;
-}
 .meme__checkbox:checked ~ .meme__top {
   color: #080909;
 }
@@ -104,7 +93,18 @@ h1, h2 {
   height: 400px;
 }
 @media not all and (hover: none) {
-
+  .meme:hover > .meme__bottom {
+    height: 400px;
+  }
+  .meme:hover .meme__button {
+    transform: rotate(45deg);
+  }
+  .accordion:hover .meme__button {
+    display: block;
+  }
+  .accordion:hover .meme__top {
+    color: #080909;
+  }
 }
 /* ============= Tablet ============ */
 
