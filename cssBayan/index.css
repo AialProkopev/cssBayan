@@ -32,6 +32,7 @@ h1, h2 {
 .accordion {
 }
 .meme {
+  cursor: pointer;
 }
 .meme__top {
   display: flex;
@@ -56,12 +57,22 @@ h1, h2 {
   justify-content: center;
   height: 0;
   transition: height 0.3s ease-in; 
+  cursor: pointer;
 }
-.meme__checkbox:checked ~ .meme__bottom {
+.meme:hover > .meme__bottom {
   height: 400px;
+}
+.meme:hover .meme__button {
+  transform: rotate(45deg);
+}
+.meme__checkbox:checked ~ .meme__top {
+  color: blue;
 }
 .meme__checkbox:checked + .meme__top > .meme__button {
   transform: rotate(45deg);
+}
+.meme__checkbox:checked ~ .meme__bottom {
+  height: 400px;
 }
 .meme__img {
 }
