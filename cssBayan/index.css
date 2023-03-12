@@ -33,6 +33,7 @@ h1, h2 {
 }
 .meme {
   cursor: pointer;
+  user-select: none;
 }
 .meme__top {
   display: flex;
@@ -59,6 +60,9 @@ h1, h2 {
   transition: height 0.3s ease-in; 
   cursor: pointer;
 }
+.meme__img {
+  width: 60%;
+}
 .meme:hover > .meme__bottom {
   height: 400px;
 }
@@ -74,5 +78,32 @@ h1, h2 {
 .meme__checkbox:checked ~ .meme__bottom {
   height: 400px;
 }
-.meme__img {
+
+/* ============= Tablet ============ */
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 580px;
+  }
+  .meme:hover > .meme__bottom {
+    height: 260px;
+  }
+  .meme__checkbox:checked ~ .meme__bottom {
+    height: 260px;
+  }
 }
+
+/* ============= Mobile ============ */
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 280px;
+  }
+  .meme:hover > .meme__bottom {
+    height: 120px;
+  }
+  .meme__checkbox:checked ~ .meme__bottom {
+    height: 120px;
+  }
+}
+
