@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 html {
-  font: 16px 'Poppins', sans-serif;
+  font: 120% 'Poppins', sans-serif;
   color: #080909;
 }
-
 body {
   padding: 0;
   margin: 0;
   min-height: 100vh;
+  width: 100%;
   background: #eeebe2;
   display: flex;
   justify-content: center;
@@ -21,20 +21,18 @@ h1, h2 {
   padding: 0;
 }
 .wrapper {
-  width: 1000px;
+  width: 60%;
 }
 .line {
-  height: 1px;
+  height: 0.1rem;
   background: grey;
-  margin: 20px 0;
+  margin: 1rem 0;
 }
 .title {
   text-align: center;
   font-size: 3rem;
   font-weight: 600;
   user-select: none;
-}
-.accordion {
 }
 .meme {
   cursor: pointer;
@@ -43,8 +41,8 @@ h1, h2 {
 .meme__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  height: 40px;
+  margin-bottom: 1.5rem;
+  height: 2rem;
   cursor: pointer;
   color: #7fa480;
 }
@@ -58,11 +56,11 @@ h1, h2 {
   color: red;
 }
 .meme__img:active {
-  outline: 1px solid black;
+  outline: 0.1rem solid black;
 }
 .meme__button {
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
   font-size: 2rem;
   text-align: center;
   transition: transform 0.2s linear;
@@ -90,11 +88,11 @@ h1, h2 {
   transform: rotate(45deg);
 }
 .meme__checkbox:checked ~ .meme__bottom {
-  height: 400px;
+  height: 20rem;
 }
 @media not all and (hover: none) {
   .meme:hover > .meme__bottom {
-    height: 400px;
+    height: 20rem;
   }
   .meme:hover .meme__button {
     transform: rotate(45deg);
@@ -110,13 +108,10 @@ h1, h2 {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 12px;
-  }
-  .wrapper {
-    width: 580px;
+    font-size: 80%;
   }
   .meme__checkbox:checked ~ .meme__bottom {
-    height: 260px;
+    height: 18rem;
   }
 }
 
@@ -124,13 +119,9 @@ h1, h2 {
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 8px;
-  }
-  .wrapper {
-    width: 280px;
+    font-size: 60%;
   }
   .meme__checkbox:checked ~ .meme__bottom {
-    height: 120px;
+    height: 10rem;
   }
 }
-
